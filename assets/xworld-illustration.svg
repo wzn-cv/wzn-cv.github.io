@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Conceptual visualization of X-World multi-camera driving generation">
+<defs><linearGradient id="bg" x1="0" x2="1" y2="1"><stop stop-color="#e7f0ff"/><stop offset="1" stop-color="#f6f4ff"/></linearGradient><linearGradient id="road" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#a1aed0"/><stop offset="1" stop-color="#44567f"/></linearGradient><linearGradient id="tile" x1="0" x2="1" y2="1"><stop stop-color="#6077a7"/><stop offset="1" stop-color="#92b3bc"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#27375e" flood-opacity=".12"/></filter></defs>
+<rect width="1200" height="680" rx="30" fill="url(#bg)"/>
+<circle cx="1036" cy="114" r="220" fill="#b8c5ff" opacity=".17"/><circle cx="108" cy="620" r="190" fill="#89d5d4" opacity=".18"/>
+<text x="62" y="82" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#596584" letter-spacing="3">CONTROLLABLE DRIVING WORLD MODEL</text>
+<text x="62" y="147" font-family="Arial,sans-serif" font-size="70" font-weight="700" fill="#182d55">X-World</text>
+<text x="66" y="183" font-family="Arial,sans-serif" font-size="23" fill="#64718a">Action-conditioned · Multi-view · Long-horizon</text>
+<g filter="url(#s)">
+<rect x="62" y="226" width="760" height="374" rx="22" fill="#f8fbff" stroke="#d6def0" stroke-width="3"/>
+<g transform="translate(82 245)">
+<g><rect width="221" height="154" rx="14" fill="url(#tile)"/><path d="M0 154 L78 55 150 55 221 154" fill="url(#road)"/><path d="M110 154 L110 64" stroke="#f6f6ff" stroke-width="5" stroke-dasharray="16 16"/><path d="M0 108 L72 73 M221 108 L160 73" stroke="#eef7ff" stroke-width="6"/><rect x="16" y="12" width="66" height="8" rx="4" fill="#fff" opacity=".7"/></g>
+<g transform="translate(239 0)"><rect width="221" height="154" rx="14" fill="#7189b4"/><path d="M0 154 L50 62 142 62 221 154" fill="url(#road)"/><path d="M110 154 L102 64" stroke="#f6f6ff" stroke-width="5" stroke-dasharray="16 16"/><rect x="25" y="38" width="48" height="24" rx="4" fill="#d8eadf"/><rect x="158" y="29" width="46" height="33" rx="4" fill="#c0d9ed"/></g>
+<g transform="translate(478 0)"><rect width="221" height="154" rx="14" fill="#8db5c4"/><path d="M0 154 L62 59 160 59 221 154" fill="#5a6489"/><path d="M110 154 L108 59" stroke="#f6f6ff" stroke-width="5" stroke-dasharray="16 16"/><path d="M0 38 H221" stroke="#d9eafb" stroke-width="3" opacity=".8"/></g>
+<g transform="translate(0 170)"><rect width="221" height="154" rx="14" fill="#9ba8c9"/><path d="M0 154 L50 56 140 56 221 154" fill="#596a96"/><path d="M110 154 L100 59" stroke="#f6f6ff" stroke-width="5" stroke-dasharray="16 16"/><rect x="153" y="59" width="35" height="18" rx="4" fill="#fab58f"/></g>
+<g transform="translate(239 170)"><rect width="221" height="154" rx="14" fill="#acc6da"/><path d="M0 154 L70 51 147 51 221 154" fill="#677da0"/><path d="M110 154 L110 51" stroke="#f6f6ff" stroke-width="5" stroke-dasharray="16 16"/><rect x="71" y="79" width="72" height="38" rx="8" fill="#fefefe"/><rect x="80" y="85" width="54" height="14" rx="4" fill="#8fadd0"/></g>
+<g transform="translate(478 170)"><rect width="221" height="154" rx="14" fill="#748baa"/><path d="M0 154 L72 45 145 45 221 154" fill="#34466f"/><path d="M110 154 L110 45" stroke="#f6f6ff" stroke-width="5" stroke-dasharray="16 16"/><rect x="53" y="80" width="26" height="16" rx="4" fill="#fbbf78"/><rect x="149" y="65" width="31" height="20" rx="4" fill="#9fe0dc"/></g>
+</g></g>
+<g transform="translate(867 255)" font-family="Arial,sans-serif"><rect width="275" height="297" rx="23" fill="#ffffff" stroke="#d9e2f4" stroke-width="3"/><text x="26" y="49" font-size="20" fill="#7580a0" font-weight="700" letter-spacing="2">CONDITIONED ON</text>
+<g fill="#273c67" font-size="24" font-weight="600"><text x="70" y="105">Ego actions</text><text x="70" y="170">Scene layout</text><text x="70" y="235">Text / weather</text></g>
+<g fill="none" stroke="#697fe0" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M28 94 h15 v-18 l17 18 -17 18 V94"/><path d="M26 157 h34 m-30 -13 v27 m27 -27 v27"/><path d="M32 225 c20 -25 35 22 54 -1"/></g></g>
+<text x="64" y="646" font-family="Arial,sans-serif" fill="#8390a4" font-size="19">Conceptual illustration · not a rendered model output</text>
+</svg>
