@@ -19,6 +19,18 @@
     pubs.forEach(pub => { const show = filter === 'all' || pub.dataset.topic.split(' ').includes(filter); pub.hidden = !show; if (show) visible++; });
     if (count) count.textContent = String(visible);
   }));
+  const galleryToggle = document.querySelector('#cogadGalleryToggle');
+  const gallery = document.querySelector('#cogad-demos');
+  if (galleryToggle && gallery) {
+    galleryToggle.addEventListener('click', () => {
+      const expanded = galleryToggle.getAttribute('aria-expanded') === 'true';
+      gallery.hidden = expanded;
+      galleryToggle.setAttribute('aria-expanded', String(!expanded));
+      const arrow = galleryToggle.querySelector('span');
+      if (arrow) arrow.textContent = expanded ? '↓' : '↑';
+      if (!expanded) gallery.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
   const dialog = document.querySelector('#videoDialog');
   const player = document.querySelector('#demoPlayer');
   const dialogTitle = document.querySelector('#videoDialogTitle');
