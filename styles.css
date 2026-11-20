@@ -94,3 +94,7 @@ h1,h2,h3,h4,p{margin-top:0}.hero h1{font:800 clamp(54px,6vw,84px)/1.06 var(--dis
 .project-links .gallery-toggle span{font-weight:400;margin-left:4px}
 .project-links .gallery-toggle:hover,.project-links .gallery-toggle[aria-expanded="true"]{background:#e7f0f6;border-color:#afc9dc}
 .project-links .gallery-toggle:focus-visible{outline:3px solid #76a7c8;outline-offset:2px}
+
+/* Move the personal reflection beneath the portrait and contact details. */
+.hero-visual .portrait-reflection{max-width:100%;margin:20px 0 0;padding:17px 0 0;border:0;border-top:1px solid var(--line);background:transparent;font:italic 400 12.4px/1.8 var(--sans);color:#667783;letter-spacing:0;text-align:left}
+@media(max-width:760px){.hero-visual .portrait-reflection{font-size:12.5px;line-height:1.75;margin-top:16px;padding-top:13px}}
