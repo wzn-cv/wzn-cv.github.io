@@ -77,3 +77,13 @@ h1,h2,h3,h4,p{margin-top:0}.hero h1{font:800 clamp(54px,6vw,84px)/1.06 var(--dis
 .personal-note{padding:45px 0 95px}.personal-note-inner{border-top:1px solid var(--line);padding-top:32px}.personal-note p{max-width:800px;margin:0 auto;text-align:center;color:#77848e;font:400 14px/2 var(--sans);font-style:italic}
 @media(max-width:900px){.pub-item{grid-template-columns:45px 130px minmax(0,1fr);gap:12px}.pub-thumb{width:130px;height:86px}.pub-actions{grid-column:3;align-self:start;padding-top:0}.pub-body h3{font-size:13px}}
 @media(max-width:600px){.research-statement{font-size:14px;line-height:1.78;padding-left:15px}.pub-item{grid-template-columns:39px 100px minmax(0,1fr);gap:11px;padding:20px 0}.pub-thumb{width:100px;height:73px}.pub-year{font-size:10px}.pub-body h3{font-size:12px}.pub-body p{font-size:10.5px}.pub-actions{grid-column:3}.pub-actions a{font-size:10px}.personal-note{padding:28px 0 60px}.personal-note p{font-size:12.5px}#xworld .project-figure img,#cogad .project-figure img{height:auto;aspect-ratio:16/9}}
+
+/* November 2026 refinement: academic publication figures, split AI4S category, honest video availability. */
+.pub-thumb img{object-fit:contain}
+#shennong .project-figure.image-figure img{object-fit:contain;background:#fff;padding:14px}
+.demo-card.poster-missing{position:relative}
+.demo-card.poster-missing::before{content:"Video thumbnail pending upload";position:absolute;inset:0 0 55px 0;display:grid;place-items:center;background:#ecf3f7;color:#5b788a;font-size:11px;text-align:center;padding:10px}
+.video-status{margin:8px 0 0;color:#e5edfa;line-height:1.7;font-size:13px}
+.video-status:empty{display:none}
+.video-dialog video[hidden]{display:none}
+@media(max-width:600px){.pub-filters{flex-wrap:wrap}.pub-filter{white-space:nowrap}}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="430" viewBox="0 0 1160 430"><rect width="1160" height="430" fill="#fff"/>
+<text x="32" y="45" font-family="Arial" font-weight="700" font-size="26" fill="#28445d">MCVP · Multi-Constraint Variation Prediction</text>
+<text x="32" y="70" font-family="Arial" font-size="15" fill="#7a8996">Workflow adapted from Figure 2, Running Ahead of Evolution (SC22)</text>
+<g font-family="Arial" fill="#32566b" font-size="18" text-anchor="middle" font-weight="bold">
+<rect x="35" y="145" width="230" height="165" rx="14" fill="#e8f3fa" stroke="#b5cede"/>
+<rect x="321" y="145" width="230" height="165" rx="14" fill="#ecf4e8" stroke="#c4dac0"/>
+<rect x="607" y="145" width="230" height="165" rx="14" fill="#f4edf9" stroke="#d6c7e5"/>
+<rect x="893" y="145" width="230" height="165" rx="14" fill="#fff2e7" stroke="#e4cdbb"/>
+<text x="150" y="183">Pre-training</text><text x="436" y="183">Fine-tuning</text><text x="722" y="183">Generation</text><text x="1008" y="183">Screening</text></g>
+<g font-family="Arial" fill="#597388" font-size="16" text-anchor="middle">
+<text x="150" y="218">UniRef90 sequences</text><text x="150" y="249">Protein language model</text><text x="150" y="278">ProtFound</text>
+<text x="436" y="218">GISAID sequences</text><text x="436" y="249">SARS-CoV-2 RBDs</text><text x="436" y="278">Fine-tuned model</text>
+<text x="722" y="218">Candidate RBD</text><text x="722" y="249">mutant sequences</text><text x="722" y="278">Large-scale generation</text>
+<text x="1008" y="218">ACE2 binding</text><text x="1008" y="249">Antibody escape</text><text x="1008" y="278">High-risk ranking</text>
+</g>
+<g stroke="#789bad" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 269 228 H 310 M 303 220 L 312 228 L 303 236"/>
+<path d="M 555 228 H 596 M 589 220 L 598 228 L 589 236"/>
+<path d="M 841 228 H 882 M 875 220 L 884 228 L 875 236"/>
+</g>
+<text x="35" y="376" fill="#82919e" font-family="Arial" font-size="15">Protein sequence modeling → prospective mutation generation → constraint-based prioritization of high-risk variants</text></svg>

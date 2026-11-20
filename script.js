@@ -24,15 +24,45 @@
   const dialogTitle = document.querySelector('#videoDialogTitle');
   const close = document.querySelector('#videoClose');
   if (dialog && player && dialogTitle && close) {
-    const closeVideo = () => { player.pause(); player.removeAttribute('src'); player.load(); if (dialog.open) dialog.close(); };
-    document.querySelectorAll('[data-video]').forEach(button => button.addEventListener('click', () => {
+    const status = document.querySelector('#videoStatus');
+    const resetPlayer = () => {
+      player.pause();
+      player.removeAttribute('src');
+      player.load();
+      player.hidden = false;
+      if (status) status.textContent = '';
+    };
+    const closeVideo = () => { if (dialog.open) dialog.close(); };
+    document.querySelectorAll('[data-video]').forEach(button => button.addEventListener('click', async () => {
+      resetPlayer();
+      const filename = button.dataset.video;
       dialogTitle.textContent = button.dataset.title || 'CogAD demonstration';
-      player.src = button.dataset.video;
+      if (status) status.textContent = 'Checking video availability…';
       dialog.showModal();
-      player.play().catch(() => {});
+      const missingMessage = 'This video has not been uploaded to the GitHub repository yet. Upload the new MP4 files into the videos/ folder to enable playback.';
+      try {
+        const response = await fetch(filename, { method: 'HEAD', cache: 'no-store' });
+        if (!response.ok) {
+          player.hidden = true;
+          if (status) status.textContent = missingMessage;
+          return;
+        }
+      } catch (_) {
+        // The file might be opened locally; the player will report any playback error.
+      }
+      if (!dialog.open) return;
+      player.src = filename;
+      player.load();
+      if (status) status.textContent = '';
+      player.play().catch(() => {
+        if (dialog.open && status && player.error) status.textContent = 'Unable to play this file. Please check that the MP4 was uploaded correctly and uses H.264 video.';
+      });
     }));
+    player.addEventListener('error', () => {
+      if (status) status.textContent = 'Unable to load this video. Confirm that its MP4 file exists in the videos/ directory on GitHub.';
+    });
     close.addEventListener('click', closeVideo);
-    dialog.addEventListener('close', () => { player.pause(); player.removeAttribute('src'); player.load(); });
+    dialog.addEventListener('close', resetPlayer);
     dialog.addEventListener('click', e => { if (e.target === dialog) closeVideo(); });
   }
   const year = document.querySelector('#year');
